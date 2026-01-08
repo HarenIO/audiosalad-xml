@@ -61,7 +61,7 @@ export class Participant {
                 ${this.instrument ? `<instrument>${xmlEscape(this.instrument)}</instrument>` : ''}
                 <name>${xmlEscape(this.name).trim()}</name>
                 <primary>${this.primary}</primary>
-                ${this.artistID?.forEach((id: ProprietaryID) => id.xml()) ?? ''}
+                ${this.artistID?.map((id: ProprietaryID) => id.xml()).join('') ?? ''}
             </participant>
         `) as AudioSaladXML;
     }
