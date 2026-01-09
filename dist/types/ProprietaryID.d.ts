@@ -12,6 +12,11 @@ export declare class ProprietaryID {
      */
     id: string;
     /**
+     * Constructor for `ProprietaryID` objects. Takes all of the attributes as an object.
+     * @param proprietaryID - An object containing all fields for the ProprietaryID.
+     */
+    constructor(proprietaryID: Partial<ProprietaryID>);
+    /**
      * Generates AudioSalad XML for the ID.
      * @returns AudioSalad XML `<artist_id>` element
      */

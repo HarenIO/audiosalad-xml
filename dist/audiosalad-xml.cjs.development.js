@@ -1330,7 +1330,11 @@ var Release = /*#__PURE__*/function () {
  */
 
 var ProprietaryID = /*#__PURE__*/function () {
-  function ProprietaryID() {
+  /**
+   * Constructor for `ProprietaryID` objects. Takes all of the attributes as an object.
+   * @param proprietaryID - An object containing all fields for the ProprietaryID.
+   */
+  function ProprietaryID(proprietaryID) {
     /**
      * What type of identifier this is, e.g. spotify; maps to `type`
      */
@@ -1340,6 +1344,7 @@ var ProprietaryID = /*#__PURE__*/function () {
      */
 
     this.id = '';
+    Object.assign(this, proprietaryID);
   }
   /**
    * Generates AudioSalad XML for the ID.
